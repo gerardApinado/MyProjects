@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct AFButton: View {
+    
+    @Binding var isShowingSafariView: Bool
     let title: String
+    
     
     var body: some View {
         Button {
-//            print("tap tap")
+            isShowingSafariView = true
         } label: {
             Text(title)
                 .font(.title2)
@@ -20,12 +23,11 @@ struct AFButton: View {
                 .frame(width: 280, height: 50)
                 .background(.blue)
                 .foregroundStyle(.white)
-//                    .clipShape(.buttonBorder)
                 .cornerRadius(10)
         }
     }
 }
 
 #Preview {
-    AFButton(title: "Test Title")
+    AFButton(isShowingSafariView: .constant(false), title: "Test Title")
 }

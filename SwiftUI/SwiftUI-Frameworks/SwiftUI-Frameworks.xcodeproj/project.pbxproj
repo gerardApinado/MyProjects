@@ -14,6 +14,10 @@
 		D56EEC872BBD4EC40046621F /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56EEC862BBD4EC40046621F /* FrameworkGridView.swift */; };
 		D56EEC892BBE47660046621F /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56EEC882BBE47660046621F /* FrameworkDetailView.swift */; };
 		D56EEC8B2BBE4A920046621F /* AFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56EEC8A2BBE4A920046621F /* AFButton.swift */; };
+		D5B988282BFEE30E00A860B5 /* FrameworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B988272BFEE30E00A860B5 /* FrameworkViewModel.swift */; };
+		D5B9882A2BFEE3F200A860B5 /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B988292BFEE3F200A860B5 /* FrameworkTitleView.swift */; };
+		D5B9882C2BFEE5C100A860B5 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9882B2BFEE5C100A860B5 /* XDismissButton.swift */; };
+		D5B9882E2BFEE7DB00A860B5 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9882D2BFEE7DB00A860B5 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		D56EEC862BBD4EC40046621F /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
 		D56EEC882BBE47660046621F /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
 		D56EEC8A2BBE4A920046621F /* AFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFButton.swift; sourceTree = "<group>"; };
+		D5B988272BFEE30E00A860B5 /* FrameworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkViewModel.swift; sourceTree = "<group>"; };
+		D5B988292BFEE3F200A860B5 /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
+		D5B9882B2BFEE5C100A860B5 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		D5B9882D2BFEE7DB00A860B5 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +71,11 @@
 				D56EEC8A2BBE4A920046621F /* AFButton.swift */,
 				D56EEC842BBD4CDD0046621F /* FrameworkModel.swift */,
 				D56EEC7A2BBD4C960046621F /* Assets.xcassets */,
+				D5B988272BFEE30E00A860B5 /* FrameworkViewModel.swift */,
+				D5B988292BFEE3F200A860B5 /* FrameworkTitleView.swift */,
+				D5B9882B2BFEE5C100A860B5 /* XDismissButton.swift */,
 				D56EEC7C2BBD4C960046621F /* Preview Content */,
+				D5B9882D2BFEE7DB00A860B5 /* SafariView.swift */,
 			);
 			path = "SwiftUI-Frameworks";
 			sourceTree = "<group>";
@@ -147,10 +159,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56EEC892BBE47660046621F /* FrameworkDetailView.swift in Sources */,
+				D5B9882E2BFEE7DB00A860B5 /* SafariView.swift in Sources */,
 				D56EEC872BBD4EC40046621F /* FrameworkGridView.swift in Sources */,
+				D5B9882A2BFEE3F200A860B5 /* FrameworkTitleView.swift in Sources */,
 				D56EEC772BBD4C950046621F /* SwiftUI_FrameworksApp.swift in Sources */,
+				D5B988282BFEE30E00A860B5 /* FrameworkViewModel.swift in Sources */,
 				D56EEC8B2BBE4A920046621F /* AFButton.swift in Sources */,
 				D56EEC852BBD4CDD0046621F /* FrameworkModel.swift in Sources */,
+				D5B9882C2BFEE5C100A860B5 /* XDismissButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
