@@ -11,12 +11,9 @@ struct FrameworkDetailView: View {
     
     var framework: Framework
     @State var isShowingSafariView = false
-    @Binding var isShowingDetailView: Bool
     
     var body: some View {
         VStack {
-            
-            XDismissButton(isShowingDetailView: $isShowingDetailView)
             
             Spacer()
             
@@ -37,6 +34,6 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework, isShowingDetailView: .constant(false))
+    FrameworkDetailView(framework: MockData.sampleFramework)
         .preferredColorScheme(.dark)
 }

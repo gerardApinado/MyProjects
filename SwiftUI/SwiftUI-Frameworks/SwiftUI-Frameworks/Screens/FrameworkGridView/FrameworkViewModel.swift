@@ -10,9 +10,5 @@ import UIKit
 
 class FrameworkViewModel : ObservableObject {
     
-    var selectedFramework: Framework? {
-        didSet { isShowingDetailView = true}
-    }
     
-    @Published var isShowingDetailView = false
 }
