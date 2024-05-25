@@ -17,7 +17,7 @@ struct Appetizer : Codable, Identifiable {
     let imageURL : String
 }
 
-struct AppetizerResponse {
+struct AppetizerResponse: Codable {
     let request : [Appetizer]
 }
 
