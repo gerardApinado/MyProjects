@@ -12,12 +12,14 @@ final class AppetizerListViewModel: ObservableObject {
     
     @Published var appetizers : [Appetizer] = []
     @Published var alertItem : AlertItem?
+    @Published var isLoading: Bool = true
     
     func getAppetizers() {
         NetworkManager.shared.getAppetizers { [self] res in
             switch res {
             case .success(let data):
                 self.appetizers = data
+                isLoading = false
             case .failure(let error):
                 switch error {
                 case .invalidResponse:
