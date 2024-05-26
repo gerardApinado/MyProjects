@@ -12,6 +12,7 @@ struct Appetizer : Codable, Identifiable {
     let name : String
     let description : String
     let price : Double
+    let calorie : Int
     let protein : Int
     let carbs : Int
     let imageURL : String
@@ -22,6 +23,13 @@ struct AppetizerResponse: Codable {
 }
 
 struct MockData {
-    static let sampleAppetizer = Appetizer(id: 01, name: "Steak", description: "Yum burger", price: 9.99, protein: 99, carbs: 99, imageURL: "")
+    static let sampleAppetizer = Appetizer(id: 01,
+                                           name: "Chicken Wings",
+                                           description: "You'll need extra napkins with these tasty treats.",
+                                           price: 9.99,
+                                           calorie: 700,
+                                           protein: 13,
+                                           carbs: 11,
+                                           imageURL: "")
     static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
 }
