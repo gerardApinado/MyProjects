@@ -13,18 +13,9 @@ struct AppetizerDetailView: View {
     @Binding var isShowingDetailView: Bool
     
     var body: some View {
-//        ZStack {
-//            LinearGradient(
-//                colors: [.white, .brandPrimary],
-//                startPoint: .topLeading,
-//                endPoint: .bottomTrailing
-//            )
-//            .ignoresSafeArea()
-            
             VStack {
                 AppetizerRemoteImage(urlString: appetizerDetail.imageURL)
-//                Image("asian-flank-steak")
-//                    .resizable()
+
                     .frame(maxWidth: .infinity, maxHeight: 380)
                     .aspectRatio(contentMode: .fit)
                 
@@ -40,7 +31,7 @@ struct AppetizerDetailView: View {
                 Spacer()
                 
                 HStack {
-//                    AppetizerNutritionView(title: "Calories", content: appetizerDetail.calorie)
+                    AppetizerNutritionView(title: "Calories", content: appetizerDetail.calories)
                     AppetizerNutritionView(title: "Carbs", content: appetizerDetail.carbs)
                     AppetizerNutritionView(title: "Protein", content: appetizerDetail.protein)
                 }
@@ -50,12 +41,7 @@ struct AppetizerDetailView: View {
                 Button {
                     
                 } label: {
-                    Text("$\(appetizerDetail.price, specifier: "%.2f") - Add To Order")
-                        .foregroundColor(.white)
-                        .frame(width: 250, height: 50)
-                        .fontWeight(.bold)
-                        .background(Color("brandPrimary"))
-                        .cornerRadius(10)
+                    APButton(title: "$\(appetizerDetail.price) - Add To Order")
                 }
                 .padding()
 
@@ -66,25 +52,14 @@ struct AppetizerDetailView: View {
             .background(Color(.systemBackground))
             .cornerRadius(12)
             .shadow(radius: 40)
-            .overlay(Button {
+            .overlay(
+                Button {
                 isShowingDetailView = false
-            } label: {
-                ZStack {
-                    Circle()
-                        .frame(width: 30, height: 30)
-                        .foregroundStyle(.white)
-                        .opacity(0.6)
-                        .shadow(radius: 10)
-                    
-                    Image(systemName: "xmark")
-                        .imageScale(.small)
-                        .foregroundColor(.black)
+                } label: {
+                    XDismissButton()
                 }
-                .padding(5)
-            }
             ,alignment: .topTrailing)
         }
-//    }
 }
 
 #Preview {
