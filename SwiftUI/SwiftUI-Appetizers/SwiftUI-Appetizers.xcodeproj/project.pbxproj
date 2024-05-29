@@ -88,8 +88,8 @@
 			children = (
 				D51336842C0324F80044F3E8 /* Cell */,
 				D58E1ED32C017CD5000CE1E5 /* AppetizerListView.swift */,
-				D59220D02C02FFC500430628 /* AppetizerListViewModel.swift */,
 				D51336852C0326160044F3E8 /* AppetizerDetailView.swift */,
+				D59220D02C02FFC500430628 /* AppetizerListViewModel.swift */,
 			);
 			path = AppetizerView;
 			sourceTree = "<group>";

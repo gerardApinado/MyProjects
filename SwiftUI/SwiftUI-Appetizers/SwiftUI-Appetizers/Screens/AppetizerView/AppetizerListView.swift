@@ -9,18 +9,32 @@ import SwiftUI
 
 struct AppetizerListView: View {
     
-    @StateObject var viewModel = AppetizerListViewModel()
+    @StateObject private var viewModel = AppetizerListViewModel()
+    @State private var isShowingDetailView: Bool = false
+    @State private var selectedAppetizer: Appetizer?
     
     var body: some View {
 //        ZStack {
             NavigationView {
                 ZStack {
-                    List(viewModel.appetizers) { appetizer in
+                    List(viewModel.appetizers ?? MockData.appetizers) { appetizer in
                         AppetizerListCell(data: appetizer)
                             .listRowSeparator(.hidden)
+                            .onTapGesture {
+                                selectedAppetizer = appetizer
+                                isShowingDetailView = true
+                            }
                     }
                     .listStyle(PlainListStyle())
                     .navigationTitle("🍽️ Appetizers")
+                    .blur(radius: isShowingDetailView ? 10 : 0)
+                    .scrollDisabled(isShowingDetailView)
+                    
+                    if let selected = selectedAppetizer,
+                       isShowingDetailView {
+                        AppetizerDetailView(appetizerDetail: selected,
+                                            isShowingDetailView: $isShowingDetailView)
+                    }
                     
                     if viewModel.isLoading {
                         LoadingView()
@@ -31,8 +45,13 @@ struct AppetizerListView: View {
             .onAppear {
                 viewModel.getAppetizers()
             }
+        
             
-            
+//            .sheet(isPresented: $viewModel.isShowingDetailView, content: {
+//                if let selected = viewModel.selectedAppetizer {
+//                    AppetizerDetailView(appetizerDetail: selected, isShowingDetailView: $viewModel.isShowingDetailView)
+//                }
+//            })
 //        }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: Text(alertItem.title),

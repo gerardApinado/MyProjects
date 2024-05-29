@@ -12,7 +12,7 @@ struct Appetizer : Codable, Identifiable {
     let name : String
     let description : String
     let price : Double
-    let calorie : Int
+//    let calorie : Int
     let protein : Int
     let carbs : Int
     let imageURL : String
@@ -27,7 +27,7 @@ struct MockData {
                                            name: "Chicken Wings",
                                            description: "You'll need extra napkins with these tasty treats.",
                                            price: 9.99,
-                                           calorie: 700,
+//                                           calorie: 700,
                                            protein: 13,
                                            carbs: 11,
                                            imageURL: "")

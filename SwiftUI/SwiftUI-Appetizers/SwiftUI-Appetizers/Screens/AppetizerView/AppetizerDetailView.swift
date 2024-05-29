@@ -13,18 +13,18 @@ struct AppetizerDetailView: View {
     @Binding var isShowingDetailView: Bool
     
     var body: some View {
-        ZStack {
-            LinearGradient(
-                            colors: [.orange, .red],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                        .ignoresSafeArea()
+//        ZStack {
+//            LinearGradient(
+//                colors: [.white, .brandPrimary],
+//                startPoint: .topLeading,
+//                endPoint: .bottomTrailing
+//            )
+//            .ignoresSafeArea()
             
             VStack {
-//                AppetizerRemoteImage(urlString: appetizerDetail.imageURL)
-                Image("asian-flank-steak")
-                    .resizable()
+                AppetizerRemoteImage(urlString: appetizerDetail.imageURL)
+//                Image("asian-flank-steak")
+//                    .resizable()
                     .frame(maxWidth: .infinity, maxHeight: 380)
                     .aspectRatio(contentMode: .fit)
                 
@@ -40,7 +40,7 @@ struct AppetizerDetailView: View {
                 Spacer()
                 
                 HStack {
-                    AppetizerNutritionView(title: "Calories", content: appetizerDetail.calorie)
+//                    AppetizerNutritionView(title: "Calories", content: appetizerDetail.calorie)
                     AppetizerNutritionView(title: "Carbs", content: appetizerDetail.carbs)
                     AppetizerNutritionView(title: "Protein", content: appetizerDetail.protein)
                 }
@@ -62,10 +62,29 @@ struct AppetizerDetailView: View {
                 Spacer()
                 
             }
-            .frame(width: UIScreen.main.bounds.width*0.8,height: 500)
-            .background()
+            .frame(width: 320,height: 525)
+            .background(Color(.systemBackground))
+            .cornerRadius(12)
+            .shadow(radius: 40)
+            .overlay(Button {
+                isShowingDetailView = false
+            } label: {
+                ZStack {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.white)
+                        .opacity(0.6)
+                        .shadow(radius: 10)
+                    
+                    Image(systemName: "xmark")
+                        .imageScale(.small)
+                        .foregroundColor(.black)
+                }
+                .padding(5)
+            }
+            ,alignment: .topTrailing)
         }
-    }
+//    }
 }
 
 #Preview {
@@ -88,6 +107,8 @@ struct AppetizerNutritionView: View {
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
                 .italic()
+                .fontWeight(.semibold)
+                
         }
         .padding()
     }
