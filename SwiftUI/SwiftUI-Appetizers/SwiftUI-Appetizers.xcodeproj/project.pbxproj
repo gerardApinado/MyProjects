@@ -26,6 +26,7 @@
 		D5C1A69B2C070EEF00085660 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1A69A2C070EEF00085660 /* APButton.swift */; };
 		D5C1A69D2C07117000085660 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1A69C2C07117000085660 /* XDismissButton.swift */; };
 		D5DDF90E2C09754C00E4BA4F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDF90D2C09754C00E4BA4F /* AccountViewModel.swift */; };
+		D5DDF9112C09770800E4BA4F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDF9102C09770800E4BA4F /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D5C1A69A2C070EEF00085660 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		D5C1A69C2C07117000085660 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		D5DDF90D2C09754C00E4BA4F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		D5DDF9102C09770800E4BA4F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		D513367E2C03242C0044F3E8 /* Ulities */ = {
 			isa = PBXGroup;
 			children = (
+				D5DDF90F2C0976FC00E4BA4F /* Extensions */,
 				D51336802C0324500044F3E8 /* Alert */,
 				D513367F2C0324370044F3E8 /* Managers */,
 			);
@@ -208,6 +211,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		D5DDF90F2C0976FC00E4BA4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D5DDF9102C09770800E4BA4F /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,6 +293,7 @@
 				D58E1EE02C0195C3000CE1E5 /* APError.swift in Sources */,
 				D58E1EDC2C0191F6000CE1E5 /* AppetizerListCell.swift in Sources */,
 				D59220D12C02FFC500430628 /* AppetizerListViewModel.swift in Sources */,
+				D5DDF9112C09770800E4BA4F /* String+Extensions.swift in Sources */,
 				D58E1ED62C017CE9000CE1E5 /* AccountView.swift in Sources */,
 				D59220D52C03127800430628 /* LoadingView.swift in Sources */,
 				D51336792C031F700044F3E8 /* RemoteImage.swift in Sources */,
