@@ -31,6 +31,10 @@ struct OrderView: View {
                             .padding()
                     }
                 }
+                
+                if viewModel.orders.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "You have no items in your order")
+                }
             }
             .navigationTitle("Orders")
         }
