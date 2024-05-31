@@ -27,6 +27,7 @@
 		D5C1A69D2C07117000085660 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C1A69C2C07117000085660 /* XDismissButton.swift */; };
 		D5DDF90E2C09754C00E4BA4F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDF90D2C09754C00E4BA4F /* AccountViewModel.swift */; };
 		D5DDF9112C09770800E4BA4F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDF9102C09770800E4BA4F /* String+Extensions.swift */; };
+		D5DDF9172C0998DA00E4BA4F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DDF9162C0998DA00E4BA4F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		D5C1A69C2C07117000085660 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		D5DDF90D2C09754C00E4BA4F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		D5DDF9102C09770800E4BA4F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D5DDF9162C0998DA00E4BA4F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D58E1ED92C018216000CE1E5 /* Appetizer.swift */,
+				D5DDF9162C0998DA00E4BA4F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				D58E1ED82C017CF6000CE1E5 /* OrderView.swift in Sources */,
 				D5DDF90E2C09754C00E4BA4F /* AccountViewModel.swift in Sources */,
 				D5C1A69D2C07117000085660 /* XDismissButton.swift in Sources */,
+				D5DDF9172C0998DA00E4BA4F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

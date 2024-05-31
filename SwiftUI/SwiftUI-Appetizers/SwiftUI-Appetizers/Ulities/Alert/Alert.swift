@@ -40,6 +40,9 @@ struct AlertContext {
         static let saveChangeSuccess     = AlertItem(title: "Save Change",
                                                 message: "Changes saved successfully.",
                                                 dismissButton: .default(Text("Ok")))
+        static let invalidUserData     = AlertItem(title: "Profile Error",
+                                                message: "There was an error saving or retrieving your profile.",
+                                                dismissButton: .default(Text("Ok")))
     }
     
     

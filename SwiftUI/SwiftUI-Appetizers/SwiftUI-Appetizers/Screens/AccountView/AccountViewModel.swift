@@ -10,34 +10,46 @@ import SwiftUI
 
 final class AccountViewModel: ObservableObject {
     
-    @Published var firstName = ""
-    @Published var lastName = ""
-    @Published var email = ""
-    @Published var birthdate = Date()
+    @AppStorage("user") private var userData: Data? ///UserDefaults
     
-    @Published var extraNapkins = false
-    @Published var frequentRefill = false
-    
+    @Published var user : User = User()
     @Published var alertItem : AlertItem?
-    
-    var isValidForm: Bool {
-        guard !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty else {
-            alertItem = AlertContext.FormAlert.invalidForm
-            return false
-        }
-        
-        guard email.isValidEmail else {
-            alertItem = AlertContext.FormAlert.invalidEmail
-            return false
-        }
-        
-        alertItem = AlertContext.FormAlert.saveChangeSuccess
-        return true
-    }
     
     func saveChanges() {
         guard isValidForm else { return }
         
-        print("Saved Changes")
+        do {
+            let data = try JSONEncoder().encode(user)
+            userData = data
+            alertItem = AlertContext.FormAlert.saveChangeSuccess
+        } catch {
+            alertItem = AlertContext.FormAlert.invalidUserData
+        }
     }
+    
+    func retriveUser() {
+        guard let userData = userData else { return }
+        
+        do {
+            user = try JSONDecoder().decode(User.self, from: userData)
+        } catch {
+            alertItem = AlertContext.FormAlert.invalidUserData
+        }
+    }
+    
+    var isValidForm: Bool {
+        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
+            alertItem = AlertContext.FormAlert.invalidForm
+            return false
+        }
+        
+        guard user.email.isValidEmail else {
+            alertItem = AlertContext.FormAlert.invalidEmail
+            return false
+        }
+        
+        return true
+    }
+    
+    
 }
