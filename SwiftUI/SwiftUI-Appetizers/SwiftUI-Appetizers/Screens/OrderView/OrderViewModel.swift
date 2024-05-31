@@ -10,6 +10,6 @@ import SwiftUI
 
 final class OrderViewModel: ObservableObject {
     
-    @Published var orders : [Appetizer] = MockData.appetizers
+    @EnvironmentObject var orders : Order
     
 }
