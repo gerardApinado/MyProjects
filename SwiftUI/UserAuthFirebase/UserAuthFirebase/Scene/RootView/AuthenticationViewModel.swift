@@ -9,9 +9,6 @@ import SwiftUI
 
 final class AuthenticationViewModel: ObservableObject {
     
-    @Published var selectedAuthMethod: AuthMethod? {
-        didSet { isShowingLoginView = true }
-    }
-    @Published var isShowingLoginView: Bool = false
+
     
 }
