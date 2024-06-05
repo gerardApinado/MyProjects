@@ -16,6 +16,11 @@
 		D58F67062C103CD9000D6B18 /* LocalhostLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67052C103CD9000D6B18 /* LocalhostLoginView.swift */; };
 		D58F67092C1049D2000D6B18 /* FormInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67082C1049D2000D6B18 /* FormInputView.swift */; };
 		D58F670B2C10509D000D6B18 /* FirebaseRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F670A2C10509D000D6B18 /* FirebaseRegisterView.swift */; };
+		D58F670E2C105C3F000D6B18 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F670D2C105C3F000D6B18 /* ProfileView.swift */; };
+		D58F67102C105E09000D6B18 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F670F2C105E09000D6B18 /* SettingsRowView.swift */; };
+		D58F67132C1061F3000D6B18 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67122C1061F3000D6B18 /* User.swift */; };
+		D58F67152C1065E6000D6B18 /* LocalhostRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67142C1065E6000D6B18 /* LocalhostRegisterView.swift */; };
+		D58F67182C10665C000D6B18 /* HeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67172C10665C000D6B18 /* HeaderImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		D58F67052C103CD9000D6B18 /* LocalhostLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalhostLoginView.swift; sourceTree = "<group>"; };
 		D58F67082C1049D2000D6B18 /* FormInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputView.swift; sourceTree = "<group>"; };
 		D58F670A2C10509D000D6B18 /* FirebaseRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRegisterView.swift; sourceTree = "<group>"; };
+		D58F670D2C105C3F000D6B18 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D58F670F2C105E09000D6B18 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		D58F67122C1061F3000D6B18 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D58F67142C1065E6000D6B18 /* LocalhostRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalhostRegisterView.swift; sourceTree = "<group>"; };
+		D58F67172C10665C000D6B18 /* HeaderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,7 @@
 		D58F66EE2C103007000D6B18 /* UserAuthFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D58F67112C1061E7000D6B18 /* Model */,
 				D58F67072C1049B2000D6B18 /* ReusableComponents */,
 				D58F66FD2C103457000D6B18 /* Scene */,
 				D58F66EF2C103007000D6B18 /* UserAuthFirebaseApp.swift */,
@@ -81,6 +92,7 @@
 		D58F66FD2C103457000D6B18 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D58F670C2C105C31000D6B18 /* Profile */,
 				D58F67022C103C65000D6B18 /* LocalhostView */,
 				D58F67012C103C53000D6B18 /* FirebaseView */,
 				D58F67002C103C45000D6B18 /* RootView */,
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D58F67052C103CD9000D6B18 /* LocalhostLoginView.swift */,
+				D58F67142C1065E6000D6B18 /* LocalhostRegisterView.swift */,
 			);
 			path = LocalhostView;
 			sourceTree = "<group>";
@@ -117,9 +130,35 @@
 		D58F67072C1049B2000D6B18 /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
+				D58F67162C106631000D6B18 /* Image */,
 				D58F67082C1049D2000D6B18 /* FormInputView.swift */,
+				D58F670F2C105E09000D6B18 /* SettingsRowView.swift */,
 			);
 			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		D58F670C2C105C31000D6B18 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D58F670D2C105C3F000D6B18 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D58F67112C1061E7000D6B18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D58F67122C1061F3000D6B18 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D58F67162C106631000D6B18 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				D58F67172C10665C000D6B18 /* HeaderImage.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,13 +231,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58F67182C10665C000D6B18 /* HeaderImage.swift in Sources */,
+				D58F670E2C105C3F000D6B18 /* ProfileView.swift in Sources */,
 				D58F66FF2C1037FC000D6B18 /* AuthenticationViewModel.swift in Sources */,
 				D58F66F22C103007000D6B18 /* AuthenticationView.swift in Sources */,
 				D58F67062C103CD9000D6B18 /* LocalhostLoginView.swift in Sources */,
 				D58F67092C1049D2000D6B18 /* FormInputView.swift in Sources */,
 				D58F66F02C103007000D6B18 /* UserAuthFirebaseApp.swift in Sources */,
 				D58F67042C103CC1000D6B18 /* FirebaseLoginView.swift in Sources */,
+				D58F67152C1065E6000D6B18 /* LocalhostRegisterView.swift in Sources */,
 				D58F670B2C10509D000D6B18 /* FirebaseRegisterView.swift in Sources */,
+				D58F67132C1061F3000D6B18 /* User.swift in Sources */,
+				D58F67102C105E09000D6B18 /* SettingsRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

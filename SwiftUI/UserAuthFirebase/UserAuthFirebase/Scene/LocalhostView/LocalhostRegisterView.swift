@@ -1,5 +1,5 @@
 //
-//  FirebaseRegisterView.swift
+//  LocalhostRegisterView.swift
 //  UserAuthFirebase
 //
 //  Created by Gerard on 6/5/24.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct FirebaseRegisterView: View {
-    
+struct LocalhostRegisterView: View {
     @State var email: String = ""
     @State var fullName: String = ""
     @State var password: String = ""
@@ -17,7 +16,7 @@ struct FirebaseRegisterView: View {
     
     var body: some View {
             VStack {
-                HeaderImage(imageName: "firebase_logo")
+                HeaderImage(imageName: "localhost_logo")
                 
                 VStack(spacing: 24) {
                     FormInputView(text: $email,
@@ -73,5 +72,5 @@ struct FirebaseRegisterView: View {
 }
 
 #Preview {
-    FirebaseRegisterView()
+    LocalhostRegisterView()
 }

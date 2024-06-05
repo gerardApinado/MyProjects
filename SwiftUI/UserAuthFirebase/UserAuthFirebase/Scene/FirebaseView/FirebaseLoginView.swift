@@ -28,11 +28,7 @@ struct FirebaseLoginView: View {
 //                }
 //                Spacer()
                     
-                Image("firebase_logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 250)
-                    .padding(.vertical, 32)
+                HeaderImage(imageName: "firebase_logo")
                 
                 VStack(spacing: 24) {
                     FormInputView(text: $email,
@@ -47,8 +43,9 @@ struct FirebaseLoginView: View {
                 }
                 .padding(.top, 15)
                 
-                Button {
-                    
+                NavigationLink {
+                    ProfileView(user: User.MOCK_USER)
+                        .navigationBarBackButtonHidden()
                 } label: {
                     HStack {
                         Text("Sign In")
@@ -60,6 +57,21 @@ struct FirebaseLoginView: View {
                 .background(Color(.systemBlue))
                 .cornerRadius(10)
                 .padding(.top, 24)
+
+                
+//                Button {
+//                    
+//                } label: {
+//                    HStack {
+//                        Text("Sign In")
+//                        Image(systemName: "arrow.right")
+//                    }
+//                    .foregroundColor(.white)
+//                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+//                }
+//                .background(Color(.systemBlue))
+//                .cornerRadius(10)
+//                .padding(.top, 24)
                 
                 Spacer()
                 
