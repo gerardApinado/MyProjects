@@ -22,6 +22,7 @@
 		D58E1EDE2C019488000CE1E5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E1EDD2C019488000CE1E5 /* NetworkManager.swift */; };
 		D58E1EE02C0195C3000CE1E5 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58E1EDF2C0195C3000CE1E5 /* APError.swift */; };
 		D58F66DF2C10165F000D6B18 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F66DE2C10165F000D6B18 /* CustomModifiers.swift */; };
+		D58F66E22C102AD5000D6B18 /* ObservableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F66E12C102AD5000D6B18 /* ObservableTest.swift */; };
 		D59220D12C02FFC500430628 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59220D02C02FFC500430628 /* AppetizerListViewModel.swift */; };
 		D59220D32C030D7A00430628 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59220D22C030D7A00430628 /* Alert.swift */; };
 		D59220D52C03127800430628 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59220D42C03127800430628 /* LoadingView.swift */; };
@@ -51,6 +52,7 @@
 		D58E1EDD2C019488000CE1E5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D58E1EDF2C0195C3000CE1E5 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		D58F66DE2C10165F000D6B18 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		D58F66E12C102AD5000D6B18 /* ObservableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTest.swift; sourceTree = "<group>"; };
 		D59220D02C02FFC500430628 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		D59220D22C030D7A00430628 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D59220D42C03127800430628 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		D58E1EC42C017C63000CE1E5 /* SwiftUI-Appetizers */ = {
 			isa = PBXGroup;
 			children = (
+				D58F66E02C102A8C000D6B18 /* Observable */,
 				D51336832C0324B80044F3E8 /* Views */,
 				D51336822C03248E0044F3E8 /* UIKit Components */,
 				D51336812C0324740044F3E8 /* Model */,
@@ -215,6 +218,14 @@
 				D58E1ECC2C017C64000CE1E5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D58F66E02C102A8C000D6B18 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				D58F66E12C102AD5000D6B18 /* ObservableTest.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 		D5C1A6992C070EDC00085660 /* Buttons */ = {
@@ -324,6 +335,7 @@
 				D58E1EE02C0195C3000CE1E5 /* APError.swift in Sources */,
 				D58E1EDC2C0191F6000CE1E5 /* AppetizerListCell.swift in Sources */,
 				D59220D12C02FFC500430628 /* AppetizerListViewModel.swift in Sources */,
+				D58F66E22C102AD5000D6B18 /* ObservableTest.swift in Sources */,
 				D53017562C09BFC00081F5E0 /* Order.swift in Sources */,
 				D5DDF9112C09770800E4BA4F /* String+Extensions.swift in Sources */,
 				D58E1ED62C017CE9000CE1E5 /* AccountView.swift in Sources */,
