@@ -10,16 +10,38 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject private var viewModel = AccountViewModel()
+    @FocusState private var focusedTextField: FormTextField?
+    
+    enum FormTextField {
+        case firstName, lastName, email
+    }
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Personal Info").padding(.leading, -18)) {
                     TextField("First Name", text: $viewModel.user.firstName)
+                        .submitLabel(.next)
+                        .focused($focusedTextField, equals: .firstName)
+                        .onSubmit {
+                            focusedTextField = .lastName
+                        }
+                    
                     TextField("Last Name", text: $viewModel.user.lastName)
+                        .submitLabel(.next)
+                        .focused($focusedTextField, equals: .lastName)
+                        .onSubmit {
+                            focusedTextField = .email
+                        }
+                    
                     TextField("Email", text: $viewModel.user.email)
+                        .focused($focusedTextField, equals: .email)
+                        .onSubmit {
+                            focusedTextField = nil
+                        }
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
+                    
                     DatePicker("Birthday", selection: $viewModel.user.birthdate, displayedComponents: .date)
                     
                     Button {
@@ -39,6 +61,13 @@ struct AccountView: View {
                 .toggleStyle(SwitchToggleStyle(tint: Color("brandPrimary")))
             }
             .navigationTitle("Account")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Dismiss") {
+                        focusedTextField = nil
+                    }
+                }
+            }
         }
         .onAppear {
             viewModel.retriveUser()
