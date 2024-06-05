@@ -21,6 +21,10 @@
 		D58F67132C1061F3000D6B18 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67122C1061F3000D6B18 /* User.swift */; };
 		D58F67152C1065E6000D6B18 /* LocalhostRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67142C1065E6000D6B18 /* LocalhostRegisterView.swift */; };
 		D58F67182C10665C000D6B18 /* HeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67172C10665C000D6B18 /* HeaderImage.swift */; };
+		D58F671B2C1067EC000D6B18 /* ConstantStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F671A2C1067EC000D6B18 /* ConstantStrings.swift */; };
+		D58F671D2C10680B000D6B18 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F671C2C10680B000D6B18 /* NetworkManager.swift */; };
+		D58F67202C106BB7000D6B18 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F671F2C106BB7000D6B18 /* APError.swift */; };
+		D58F67222C106BD0000D6B18 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F67212C106BD0000D6B18 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		D58F67122C1061F3000D6B18 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D58F67142C1065E6000D6B18 /* LocalhostRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalhostRegisterView.swift; sourceTree = "<group>"; };
 		D58F67172C10665C000D6B18 /* HeaderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImage.swift; sourceTree = "<group>"; };
+		D58F671A2C1067EC000D6B18 /* ConstantStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantStrings.swift; sourceTree = "<group>"; };
+		D58F671C2C10680B000D6B18 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D58F671F2C106BB7000D6B18 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		D58F67212C106BD0000D6B18 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		D58F66EE2C103007000D6B18 /* UserAuthFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D58F67192C1067CA000D6B18 /* Utilities */,
 				D58F67112C1061E7000D6B18 /* Model */,
 				D58F67072C1049B2000D6B18 /* ReusableComponents */,
 				D58F66FD2C103457000D6B18 /* Scene */,
@@ -161,6 +170,25 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		D58F67192C1067CA000D6B18 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D58F671E2C106B92000D6B18 /* Alert */,
+				D58F671A2C1067EC000D6B18 /* ConstantStrings.swift */,
+				D58F671C2C10680B000D6B18 /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D58F671E2C106B92000D6B18 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D58F671F2C106BB7000D6B18 /* APError.swift */,
+				D58F67212C106BD0000D6B18 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +261,7 @@
 			files = (
 				D58F67182C10665C000D6B18 /* HeaderImage.swift in Sources */,
 				D58F670E2C105C3F000D6B18 /* ProfileView.swift in Sources */,
+				D58F671B2C1067EC000D6B18 /* ConstantStrings.swift in Sources */,
 				D58F66FF2C1037FC000D6B18 /* AuthenticationViewModel.swift in Sources */,
 				D58F66F22C103007000D6B18 /* AuthenticationView.swift in Sources */,
 				D58F67062C103CD9000D6B18 /* LocalhostLoginView.swift in Sources */,
@@ -240,8 +269,11 @@
 				D58F66F02C103007000D6B18 /* UserAuthFirebaseApp.swift in Sources */,
 				D58F67042C103CC1000D6B18 /* FirebaseLoginView.swift in Sources */,
 				D58F67152C1065E6000D6B18 /* LocalhostRegisterView.swift in Sources */,
+				D58F67202C106BB7000D6B18 /* APError.swift in Sources */,
+				D58F671D2C10680B000D6B18 /* NetworkManager.swift in Sources */,
 				D58F670B2C10509D000D6B18 /* FirebaseRegisterView.swift in Sources */,
 				D58F67132C1061F3000D6B18 /* User.swift in Sources */,
+				D58F67222C106BD0000D6B18 /* Alert.swift in Sources */,
 				D58F67102C105E09000D6B18 /* SettingsRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
