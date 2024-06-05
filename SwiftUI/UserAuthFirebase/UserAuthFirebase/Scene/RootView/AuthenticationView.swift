@@ -38,7 +38,7 @@ struct AuthenticationView: View {
             .fullScreenCover(isPresented: $viewModel.isShowingLoginView, content: {
                 switch viewModel.selectedAuthMethod {
                 case .firebase:
-                    FirebaseLoginView(isPresented: $viewModel.isShowingLoginView)
+                    FirebaseLoginView()
                 case .local:
                     LocalhostLoginView()
                 case .none:

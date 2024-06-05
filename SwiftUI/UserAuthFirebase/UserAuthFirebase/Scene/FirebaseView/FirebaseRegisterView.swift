@@ -1,5 +1,5 @@
 //
-//  FirebaseLoginView.swift
+//  FirebaseRegisterView.swift
 //  UserAuthFirebase
 //
 //  Created by Gerard on 6/5/24.
@@ -7,27 +7,16 @@
 
 import SwiftUI
 
-struct FirebaseLoginView: View {
+struct FirebaseRegisterView: View {
     
-//    @Binding var isPresented: Bool
     @State var email: String = ""
+    @State var fullName: String = ""
     @State var password: String = ""
+    @State var rePassword: String = ""
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationStack {
             VStack {
-//                HStack {
-//                    Button {
-//                        isPresented.toggle()
-//                    } label: {
-//                        Label("Back", systemImage: "arrow.left")
-//                    }
-//                    .padding(.leading)
-//                    
-//                    Spacer()
-//                }
-//                Spacer()
-                    
                 Image("firebase_logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -40,9 +29,19 @@ struct FirebaseLoginView: View {
                                   placeholder: "Enter your email")
                     .autocapitalization(.none)
                     
+                    FormInputView(text: $fullName,
+                                  title: "Full Name",
+                                  placeholder: "Enter your full name")
+                    .autocapitalization(.none)
+                    
                     FormInputView(text: $password,
                                   title: "Password",
                                   placeholder: "Enter your password",
+                                  isSecureField: true)
+                    
+                    FormInputView(text: $rePassword,
+                                  title: "Confirm Password",
+                                  placeholder: "Re-enter your password",
                                   isSecureField: true)
                 }
                 .padding(.top, 15)
@@ -51,7 +50,7 @@ struct FirebaseLoginView: View {
                     
                 } label: {
                     HStack {
-                        Text("Sign In")
+                        Text("Sign Up")
                         Image(systemName: "arrow.right")
                     }
                     .foregroundColor(.white)
@@ -63,23 +62,20 @@ struct FirebaseLoginView: View {
                 
                 Spacer()
                 
-                NavigationLink {
-                    FirebaseRegisterView()
-                        .navigationBarBackButtonHidden(true)
+                Button {
+                    dismiss()
                 } label: {
                     HStack{
-                        Text("Don't have an account?")
-                        Text("Sign Up")
+                        Text("Already have an account?")
+                        Text("Sign In")
                             .fontWeight(.bold)
                     }
                     .font(.system(size: 14))
                 }
-
             }
-        }
     }
 }
 
 #Preview {
-    FirebaseLoginView()
+    FirebaseRegisterView()
 }
