@@ -14,6 +14,7 @@ struct FirebaseRegisterView: View {
     @State var password: String = ""
     @State var rePassword: String = ""
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel : FirebaseLoginViewModel
     
     var body: some View {
             VStack {
@@ -43,7 +44,9 @@ struct FirebaseRegisterView: View {
                 .padding(.top, 15)
                 
                 Button {
-                    
+                    Task {
+                        try await viewModel.createUser(withEmail:email, password:password, fullName:fullName)
+                    }
                 } label: {
                     HStack {
                         Text("Sign Up")

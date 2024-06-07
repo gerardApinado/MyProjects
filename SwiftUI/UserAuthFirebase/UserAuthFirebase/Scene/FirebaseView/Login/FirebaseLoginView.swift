@@ -12,6 +12,7 @@ struct FirebaseLoginView: View {
 //    @Binding var isPresented: Bool
     @State var email: String = ""
     @State var password: String = ""
+    @EnvironmentObject var viewModel : FirebaseLoginViewModel
     
     var body: some View {
         NavigationStack {
@@ -43,9 +44,11 @@ struct FirebaseLoginView: View {
                 }
                 .padding(.top, 15)
                 
-                NavigationLink {
-                    ProfileView(user: User.MOCK_USER)
-                        .navigationBarBackButtonHidden()
+                
+                Button {
+                    Task {
+//                        try await viewModel.createUser(withEmail:password:fullName:)
+                    }
                 } label: {
                     HStack {
                         Text("Sign In")
@@ -57,21 +60,6 @@ struct FirebaseLoginView: View {
                 .background(Color(.systemBlue))
                 .cornerRadius(10)
                 .padding(.top, 24)
-
-                
-//                Button {
-//                    
-//                } label: {
-//                    HStack {
-//                        Text("Sign In")
-//                        Image(systemName: "arrow.right")
-//                    }
-//                    .foregroundColor(.white)
-//                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
-//                }
-//                .background(Color(.systemBlue))
-//                .cornerRadius(10)
-//                .padding(.top, 24)
                 
                 Spacer()
                 

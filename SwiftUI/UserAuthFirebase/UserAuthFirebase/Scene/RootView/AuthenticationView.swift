@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthenticationView: View {
     
-    @StateObject var viewModel = AuthenticationViewModel()
+    @EnvironmentObject var viewModel : FirebaseLoginViewModel
     
     var body: some View {
         NavigationStack {
@@ -20,7 +20,13 @@ struct AuthenticationView: View {
                     .multilineTextAlignment(.center)
                 
                 NavigationLink {
-                    FirebaseLoginView()
+                    Group {
+                        if let viewmodel = viewModel.userSession {
+                            ProfileView()
+                        } else {
+                            FirebaseLoginView()
+                        }
+                    }
                 } label: {
                     AuthMethodButton(title: "Firebase", img: "firebase_icon")
                 }
