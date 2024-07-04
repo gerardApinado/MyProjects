@@ -32,7 +32,7 @@ struct LocalhostLoginView: View {
                 .padding(.top, 15)
                 
                 NavigationLink {
-                    ProfileView(user: User.MOCK_USER)
+                    ProfileView()
                         .navigationBarBackButtonHidden()
                 } label: {
                     HStack {
